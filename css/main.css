@@ -1,13 +1,14 @@
 body {
-    background: url("https://wallpapercave.com/wp/5DyFHAb.jpg") no-repeat;
-    background-size: cover;
+    background: #f12711;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .main-image {
-    background: #9b4e2d;
+    background: #fff5f1;
 }
 
 h1 {
-    color: #ce1815;
+    color: #000000;
 }
 .main-image img {
     width: 100%;
@@ -15,5 +16,5 @@ h1 {
 }
 
 .main-image .hover {
-    border: solid red 2px;
+    border: solid red 1px;
 }

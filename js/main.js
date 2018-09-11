@@ -7,8 +7,10 @@ $(document).ready(function () {
         let number = matches.length-this.id;
 
         if (number <= 3) {
-            matches.slice(-Math.abs(number)).remove();
-            removeMatch();
+            matches.slice(-Math.abs(number)).fadeOut("normal",function () {
+                $(this).remove();
+                removeMatch();
+            });
         }
 
 
@@ -36,9 +38,11 @@ function createMatches(number) {
 
 function removeMatch() {
     let matches = $('.main-image').children();
+    let number = -Math.abs(Math.floor(Math.random() * 3) + 1);
+    console.log(number);
 
 
-    matches.slice(-Math.abs(Math.floor(Math.random() * 3) + 1)).fadeOut("normal", function () {
+    matches.slice(number).fadeOut("normal", function () {
         $(this).remove();
     });
 }
