@@ -1,3 +1,14 @@
+body {
+    background: url("https://wallpapercave.com/wp/5DyFHAb.jpg") no-repeat;
+    background-size: cover;
+}
+.main-image {
+    background: #9b4e2d;
+}
+
+h1 {
+    color: #ce1815;
+}
 .main-image img {
     width: 100%;
     height: 100%;
