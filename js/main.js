@@ -4,31 +4,27 @@ $(document).ready(function () {
 
     $('.main-image').children().click(function () {
         let matches = $('.main-image').children();
-        let number = matches.length-this.id;
+        let number = matches.length - this.id;
 
         if (number <= 3) {
-            matches.slice(-Math.abs(number)).fadeOut("normal",function () {
+            matches.slice(-Math.abs(number)).fadeOut("normal", function () {
                 $(this).remove();
                 removeMatch();
             });
         }
 
-
     }).hover(function () {
         let matches = $('.main-image').children();
-        let number = matches.length-this.id;
+        let number = matches.length - this.id;
 
         if (number <= 3) {
             matches.slice(-Math.abs(number)).addClass('hover');
         }
-
-
     }, function () {
         let matches = $('.main-image').children();
         matches.slice(-3).removeClass('hover');
     });
 });
-
 
 function createMatches(number) {
     for (var i = 0; i < number; i++) {
@@ -55,11 +51,9 @@ function removeMatch() {
         location.reload();
     }
     else if (matches.length < 1) {
-        alert('Vous avez perdue');
+        alert('Vous avez perdu');
         location.reload();
     }
-    //let number = -Math.abs(matches.length%3)-1;
-
     matches.slice(number).fadeOut("normal", function () {
         $(this).remove();
     });
