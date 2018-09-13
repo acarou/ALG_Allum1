@@ -38,9 +38,27 @@ function createMatches(number) {
 
 function removeMatch() {
     let matches = $('.main-image').children();
-    let number = -Math.abs(Math.floor(Math.random() * 3) + 1);
-    console.log(number);
 
+    let number = -Math.abs(Math.floor(Math.random() * 3) + 1);
+
+    if (matches.length == 2) {
+        number = -1
+    }
+    else if (matches.length == 3) {
+        number = -2
+    }
+    else if (matches.length == 4) {
+        number = -3
+    }
+    else if (matches.length == 1) {
+        alert('Vous avez gagner');
+        location.reload();
+    }
+    else if (matches.length < 1) {
+        alert('Vous avez perdue');
+        location.reload();
+    }
+    //let number = -Math.abs(matches.length%3)-1;
 
     matches.slice(number).fadeOut("normal", function () {
         $(this).remove();
